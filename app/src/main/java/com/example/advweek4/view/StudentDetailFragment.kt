@@ -17,8 +17,6 @@ import com.example.advweek4.viewmodel.ListViewModel
 
 class StudentDetailFragment : Fragment() {
     private lateinit var detailView: DetailViewModel
-    private val studentListAdapter = StudentListAdapter(arrayListOf())
-    private lateinit var txtNama: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
