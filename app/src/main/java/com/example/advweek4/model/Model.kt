@@ -13,4 +13,19 @@ data class Student(
     val photoUrl:String
 )
 
-
+data class Laptop(
+    val id:Int?,
+    val brand:String?,
+    val model:String?,
+    val releaseYear:Int?,
+    val color:String?,
+    val price:Double?,
+    val features:List<String>,
+    val specs:Specs?,
+    val photoLaptop:String?
+)
+data class Specs(
+    val processor:String?,
+    val memory:String?,
+    val storage:String?
+)

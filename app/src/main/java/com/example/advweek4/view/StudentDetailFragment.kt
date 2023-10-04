@@ -5,15 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.advweek4.R
 import com.example.advweek4.viewmodel.DetailViewModel
-import com.example.advweek4.viewmodel.ListViewModel
 
 class StudentDetailFragment : Fragment() {
     private lateinit var detailView: DetailViewModel
@@ -38,8 +34,8 @@ class StudentDetailFragment : Fragment() {
     }
 
     fun observeViewModel() {
-        val id = view?.findViewById<TextView>(R.id.txtID)
-        val nama = view?.findViewById<TextView>(R.id.txtNama)
+        val id = view?.findViewById<TextView>(R.id.txtBrand)
+        val nama = view?.findViewById<TextView>(R.id.txtModel)
         val bod = view?.findViewById<TextView>(R.id.txtBirth)
         val phone = view?.findViewById<TextView>(R.id.txtPhone)
         detailView.studentLD.observe(viewLifecycleOwner, Observer { student ->

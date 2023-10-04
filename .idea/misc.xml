@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Kuliah/ANMP1/advWeek4/app/src/main/res/layout/activity_main.xml" value="0.21875" />
+        <entry key="..\:/Kuliah/ANMP1/advWeek4/app/src/main/res/layout/fragment_laptop_list.xml" value="0.264" />
         <entry key="..\:/Kuliah/ANMP1/advWeek4/app/src/main/res/layout/fragment_student_detail.xml" value="0.21875" />
         <entry key="..\:/Kuliah/ANMP1/advWeek4/app/src/main/res/layout/fragment_student_list.xml" value="0.1" />
+        <entry key="..\:/Kuliah/ANMP1/advWeek4/app/src/main/res/layout/laptop_list_item.xml" value="0.4" />
         <entry key="..\:/Kuliah/ANMP1/advWeek4/app/src/main/res/layout/student_list_item.xml" value="0.264" />
       </map>
     </option>

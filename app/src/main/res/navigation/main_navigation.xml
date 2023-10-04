@@ -23,4 +23,9 @@
             android:name="studentId"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/laptopListFragment"
+        android:name="com.example.advweek4.view.LaptopListFragment"
+        android:label="fragment_laptop_list"
+        tools:layout="@layout/fragment_laptop_list" />
 </navigation>

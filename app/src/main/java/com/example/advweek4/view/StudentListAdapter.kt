@@ -17,8 +17,8 @@ class StudentListAdapter(val studentList: ArrayList<Student>) :RecyclerView.Adap
         val txtNama:TextView
         val btnDetail:Button
         init {
-            txtID = view.findViewById(R.id.txtID)
-            txtNama = view.findViewById(R.id.txtNama)
+            txtID = view.findViewById(R.id.txtBrand)
+            txtNama = view.findViewById(R.id.txtModel)
             btnDetail = view.findViewById(R.id.btnDetail)
         }
     }

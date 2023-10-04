@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="ID"
+                android:text="Brand:"
                 app:layout_constraintStart_toEndOf="@+id/photoLaptop"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,9 +47,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="STUDENT NAME"
+                android:text="Model:"
                 app:layout_constraintStart_toStartOf="@+id/txtBrand"
                 app:layout_constraintTop_toBottomOf="@+id/txtBrand" />
+
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Price:"
+                app:layout_constraintStart_toStartOf="@+id/txtModel"
+                app:layout_constraintTop_toBottomOf="@+id/txtModel" />
 
             <Button
                 android:id="@+id/btnDetail"
