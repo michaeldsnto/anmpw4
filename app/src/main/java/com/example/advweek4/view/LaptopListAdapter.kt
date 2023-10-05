@@ -36,7 +36,7 @@ class LaptopListAdapter(val laptopList:ArrayList<Laptop>) :RecyclerView.Adapter<
     override fun onBindViewHolder(holder: LaptopViewHolder, position: Int) {
         holder.txtBrand.text = "Brand: " + laptopList[position].brand
         holder.txtModel.text = "Model: " + laptopList[position].model
-        holder.txtPrice.text = "Price" + laptopList[position].price.toString()
+        holder.txtPrice.text = "Price: " + laptopList[position].price.toString()
         val imageUrl = laptopList[position].photoLaptop
         Picasso.get().load(imageUrl).resize(350, 300).into(holder.photoLaptop)
     }
