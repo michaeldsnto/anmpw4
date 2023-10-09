@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.advweek4.R
 import com.example.advweek4.viewmodel.DetailViewModel
 import com.example.advweek4.viewmodel.ListViewModel
+import com.squareup.picasso.Picasso
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Completable.timer
 import io.reactivex.rxjava3.core.Maybe.timer
@@ -59,7 +60,7 @@ class StudentDetailFragment : Fragment() {
             nama?.setText(student.nama)
             bod?.setText(student.bod)
             phone?.setText(student.phone)
-            
+            Picasso.get().load(student.photoUrl).into(imgStudent)
 
             val btnUpdate = view?.findViewById<Button>(R.id.btnUpdate)
             btnUpdate?.setOnClickListener{
