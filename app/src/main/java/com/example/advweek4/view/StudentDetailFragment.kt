@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.lifecycle.Observer
@@ -14,6 +16,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.advweek4.R
 import com.example.advweek4.viewmodel.DetailViewModel
 import com.example.advweek4.viewmodel.ListViewModel
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.core.Completable.timer
+import io.reactivex.rxjava3.core.Maybe.timer
+import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.core.Observable.timer
+import io.reactivex.rxjava3.core.Single.timer
+import io.reactivex.rxjava3.schedulers.Schedulers
+import java.util.concurrent.TimeUnit
 
 class StudentDetailFragment : Fragment() {
     private lateinit var detailView: DetailViewModel
@@ -42,11 +52,24 @@ class StudentDetailFragment : Fragment() {
         val nama = view?.findViewById<TextView>(R.id.txtNama)
         val bod = view?.findViewById<TextView>(R.id.txtBirth)
         val phone = view?.findViewById<TextView>(R.id.txtPhone)
+        val imgStudent = view?.findViewById<ImageView>(R.id.imgStudent)
+
         detailView.studentLD.observe(viewLifecycleOwner, Observer { student ->
             id?.setText(student.id)
             nama?.setText(student.nama)
             bod?.setText(student.bod)
             phone?.setText(student.phone)
+            
+
+            val btnUpdate = view?.findViewById<Button>(R.id.btnUpdate)
+            btnUpdate?.setOnClickListener{
+                Observable.timer(5, TimeUnit.SECONDS)
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe {
+                        MainActivity.showNotification("New Notification", "Student data is Updated", R.drawable.ic_baseline_update_24)
+                    }
+            }
         })
     }
 }
